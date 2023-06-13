@@ -2,15 +2,20 @@ import evaluate
 
 comet = evaluate.load("comet")
 
-predictions = [
-    "This is an examplary sentence.",
-    "Try different sentences for the reference and observe the change in scores."
-]
-references = [
-    ["This is an examplary sentence."],
-    ["Try different sentences for the reference and observe the change in scores."]
-]
 
-results = comet.compute(predictions=predictions, references=references)
-
-print(round(results["score"], 1))
+source = [
+    "Dem Feuer konnte Einhalt geboten werden",
+    "Schulen und Kindergärten wurden eröffnet.",
+]
+hypothesis = [
+    "The fire could be stopped",
+    "Schools and kindergartens were open",
+]
+reference = [
+    "They were able to control the fire.",
+    "Schools and kindergartens opened",
+]
+comet_score = comet.compute(
+    predictions=hypothesis, references=reference, sources=source
+)
+print(comet_score)

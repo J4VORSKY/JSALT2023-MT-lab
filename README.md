@@ -166,12 +166,7 @@ Now, we compare training models from scratch and finetuning a model. In particul
 
 ### Task 6 (Training from scratch)
 
-Combine solutions from previous tasks to train a model. You can use a `Trainer`, see [here](https://huggingface.co/learn/nlp-course/chapter3/3?fw=pt). Do not forget to reinitialize model weights, for example by:
-
-```python
-for layer in model.model.encoder.layers + model.model.decoder.layers:
-    layer.apply(model._init_weights)
-```
+Combine solutions from previous tasks to train a model. You can use a `Trainer`, see [here](https://huggingface.co/learn/nlp-course/chapter3/3?fw=pt).
 
 <details>
 <summary>Solution</summary>

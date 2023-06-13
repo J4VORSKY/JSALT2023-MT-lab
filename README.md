@@ -70,7 +70,7 @@ Output:
 
 ## Data
 
-### Task 3
+### Task 2
 
 The next step is to download and prepare the data for training. For example, use one of the `wmtXX` datasets and a language pair of your choice. Specifically, download the dataset (load only first 100k training and 1000 validation samples to speed up the process), get familiar with its structure and print first 5 items.
 

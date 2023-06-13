@@ -248,8 +248,7 @@ def tokenize_function(examples):
 
     return model_inputs
 
-raw_datasets = load_dataset("wmt19", "cs-en", split=['train[:100000]', 'validation[:1000]'],
-    cache_dir="/home/javorsky/personal_work_troja/.cache/huggingface/datasets/")
+raw_datasets = load_dataset("wmt19", "cs-en", split=['train[:100000]', 'validation[:1000]'])
 
 tokenized_train = raw_datasets[0].map(tokenize_function, batched=True)
 tokenized_valid = raw_datasets[1].map(tokenize_function, batched=True)

@@ -1,7 +1,7 @@
 from transformers import MarianMTModel, MarianTokenizer
 
 src_text = [
-    "This is a sentence in english that we want to translate to french."
+    "This is a sentence in English that we want to translate to French."
 ]
 
 model_name = "Helsinki-NLP/opus-mt-en-fr"
